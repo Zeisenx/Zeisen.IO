@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* { padding: 0; margin: 0; }
+			body
+			{
+				background-color: #777777;
+			}
+			canvas {
+				border:5px solid #ffffff;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<canvas id="canvas" width="1024" height="768"></canvas>
+			<input type="text" id="text1"></input>
+		</center>
+		
+		<script type="text/javascript" src="js/vector2D.js"></script>
+		<script type="text/javascript" src="js/core.js"></script>
+		<script type="text/javascript" src="js/player.js"></script>
+		<script type="text/javascript" src="js/food.js"></script>
+		<script type="text/javascript" src="js/key_input.js"></script>
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				Game.start();
+			};
+		</script>
+	</body>
+</html>
