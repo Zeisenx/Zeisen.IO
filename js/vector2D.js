@@ -21,6 +21,16 @@ Vector2D.prototype.subVector = function(target) {
 	this.y -= target.y;
 };
 
+Vector2D.prototype.mul = function(value) {
+	this.x *= value;
+	this.y *= value;
+};
+
+Vector2D.prototype.mulVector = function(target) {
+	this.x *= target.x;
+	this.y *= target.y;
+};
+
 Vector2D.prototype.div = function(value) {
 	this.x /= value;
 	this.y /= value;

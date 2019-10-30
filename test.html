@@ -5,29 +5,48 @@
 			* { padding: 0; margin: 0; }
 			body
 			{
-				background-color: #777777;
+				background-color: #000000;
 			}
 			canvas {
 				border:5px solid #ffffff;
 				background-color: #000000;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
 			}
 		</style>
 	</head>
 	<body>
-		<center>
-			<canvas id="canvas" width="1024" height="768"></canvas>
-			<input type="text" id="text1"></input>
-		</center>
+		<canvas id="canvas" width="1024" height="768"></canvas>
 		
+		<!-- 2D 벡터 관련 연산 스크립트 -->
 		<script type="text/javascript" src="js/vector2D.js"></script>
-		<script type="text/javascript" src="js/core.js"></script>
+		<!-- 자주 쓰이는 함수가 담긴 스크립트 -->
+		<script type="text/javascript" src="js/func.js"></script>
+		<!-- 음악 스크립트 -->
+		<script type="text/javascript" src="js/music.js"></script>
+		<!-- 게임 시스템 관리 스크립트 -->
+		<script type="text/javascript" src="js/manager.js"></script>
+		<!-- 실제 게임 관련 스크립트 -->
+		<script type="text/javascript" src="js/game.js"></script>
+		<!-- 실제 게임 관련 스크립트 -->
+		<script type="text/javascript" src="js/game_menu.js"></script>
+		<!-- 플레이어에 대한 클래스 스크립트 -->
 		<script type="text/javascript" src="js/player.js"></script>
+		<!-- 플레이어들이 먹을 음식들에 대한 스크립트 -->
 		<script type="text/javascript" src="js/food.js"></script>
+		<!-- 키 입력 스크립트 -->
 		<script type="text/javascript" src="js/key_input.js"></script>
 		
 		<script type="text/javascript">
 			window.onload = function() {
-				Game.start();
+				GameMenu.start();
+				//Game.start();
+				
+				Music.path = new Audio("etc_src/music/tha.mp3");
+				Music.path.volume = 1.0;
+				Music.play();
 			};
 		</script>
 	</body>
